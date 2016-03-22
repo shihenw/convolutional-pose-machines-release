@@ -1,2 +1,2 @@
 # convolutional-pose-machines
-public
+Under construction. Please come back later!
