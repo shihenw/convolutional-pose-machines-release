@@ -1,6 +1,7 @@
 # Convolutional Pose Machines
 Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh
-Any questions please contact shihenw@cmu.edu.
+
+Contact: shihenw@cmu.edu.
 
 ## Before Everything
 - Install [Caffe](http://caffe.berkeleyvision.org/). If you are interested in training this model on your own machines, consider using [our version](https://github.com/shihenw/caffe) with a data layer performing online augmentation. Make sure you have done `make matcaffe` and `make pycaffe`.
