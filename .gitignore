@@ -2,5 +2,5 @@ dataset/
 *.caffemodel
 testing/results/
 *.m~
-./caffePath.cfg
+caffePath.cfg
 models/
