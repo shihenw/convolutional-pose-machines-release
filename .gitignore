@@ -1,0 +1,6 @@
+dataset/
+*.caffemodel
+testing/results/
+*.m~
+./caffePath.cfg
+models/
