@@ -1,6 +1,8 @@
 # Convolutional Pose Machines
 Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh
 
+http://arxiv.org/abs/1602.00134
+
 Contact: shihenw@cmu.edu.
 
 ## Before Everything
