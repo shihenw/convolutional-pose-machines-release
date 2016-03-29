@@ -104,15 +104,12 @@ function scores = applyDNN(images, net, nstage)
     % do forward pass to get scores
     % scores are now Width x Height x Channels x Num
     net.forward(input_data);
-    endpoint_names = cell(1, nstage);
     scores = cell(1, nstage);
-    endpoint_names{1} = 'conv7_stage1'; % 'conv12_stage1';
-    for s = 2:nstage
-        endpoint_names{s} = sprintf('Mconv5_stage%d', s); %sprintf('Mconv7_stage%d', s); %sprintf('Mconv5_stage%d', s);
-    end
     for s = 1:nstage
-        blob_id_C = strfind(net.blob_names, endpoint_names{s});
-        blob_id = not(cellfun('isempty', blob_id_C));
+        string_to_search = sprintf('stage%d', s);
+        blob_id_C = strfind(net.blob_names, string_to_search);
+        blob_id = find(not(cellfun('isempty', blob_id_C)));
+        blob_id = blob_id(end);
         scores{s} = net.blob_vec(blob_id).get_data();
     end
     

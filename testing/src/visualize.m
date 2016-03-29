@@ -14,6 +14,15 @@ hFig = figure(2);
 if(np == 14 && nstage == 6)
     num_col = 8;
     ha = tight_subplot(3, num_col, [0.03 0.01], [0.01 0.04], [0.01 0.01]);
+    bg = get(gcf, 'Color');
+    set(ha(1), 'Color', bg, 'xcolor', bg, 'ycolor', bg);
+    axes(ha(1));
+    text(0.5, 0.55,{'Convolutional', 'Pose Machines'},'fontsize',20, 'HorizontalAlignment', 'center');
+    text(0.5, 0.35,'CVPR 2016','fontsize',14, 'HorizontalAlignment', 'center');
+    set(ha(2), 'Color', bg, 'xcolor', bg, 'ycolor', bg);
+    axes(ha(2));
+    text(0.5, 0.55,'Using model:','fontsize',14, 'HorizontalAlignment', 'center');
+    text(0.5, 0.45, model.description_short,'fontsize',14, 'Interpreter', 'none', 'HorizontalAlignment', 'center');
 elseif(np == 9 && nstage == 4)
     num_col = 5;
     ha = tight_subplot(3, num_col, [0.03 0.01], [0.01 0.04], [0.01 0.01]);
