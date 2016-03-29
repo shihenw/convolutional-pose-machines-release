@@ -1,5 +1,5 @@
-# [Convolutional Pose Machines](http://arxiv.org/abs/1602.00134)
-Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh, "Convolutional pose machines", CVPR 2016.
+# Convolutional Pose Machines
+Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh, "[Convolutional pose machines](http://arxiv.org/abs/1602.00134)", CVPR 2016.
 
 Contact: shihenw@cmu.edu.
 
