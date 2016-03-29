@@ -4,7 +4,7 @@ Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh, "[Convolutional pose
 Contact: shihenw@cmu.edu.
 
 ## Before Everything
-- Sit back and watch some [videos](https://www.youtube.com/watch?v=MsZkLK0Wcmk).
+- Sit back and watch some [videos](https://www.youtube.com/playlist?list=PLNh5A7HtLRcpsMfvyG0DED-Dr4zW5Lpcg).
 - Sit up straight and install [Caffe](http://caffe.berkeleyvision.org/). If you are interested in training this model on your own machines, consider using [our version](https://github.com/shihenw/caffe) with a data layer performing online augmentation. Make sure you have done `make matcaffe` and `make pycaffe`.
 - Copy `caffePath.cfg.example` to `caffePath.cfg` and set your own path in it.
 
