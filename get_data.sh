@@ -1,17 +1,17 @@
 # get FLIC
-#wget http://vision.grasp.upenn.edu/video/FLIC.zip
-#unzip FLIC.zip -d dataset/
-#rm -f FLIC.zip
+wget http://vision.grasp.upenn.edu/video/FLIC.zip
+unzip FLIC.zip -d dataset/
+rm -f FLIC.zip
 
 # get LEEDS
-#cd dataset/; mkdir LEEDS/; cd ..
-#wget http://www.comp.leeds.ac.uk/mat4saj/lsp_dataset.zip
-#wget http://www.comp.leeds.ac.uk/mat4saj/lspet_dataset.zip
-#unzip lsp_dataset.zip -d dataset/LEEDS/
-#cd dataset/LEEDS/; mkdir lspet_dataset; cd ../..
-#unzip lspet_dataset.zip -d dataset/LEEDS/lspet_dataset
-#rm -f lsp_dataset.zip
-#rm -f lspet_dataset.zip
+cd dataset/; mkdir LEEDS/; cd ..
+wget http://www.comp.leeds.ac.uk/mat4saj/lsp_dataset.zip
+wget http://www.comp.leeds.ac.uk/mat4saj/lspet_dataset.zip
+unzip lsp_dataset.zip -d dataset/LEEDS/
+cd dataset/LEEDS/; mkdir lspet_dataset; cd ../..
+unzip lspet_dataset.zip -d dataset/LEEDS/lspet_dataset
+rm -f lsp_dataset.zip
+rm -f lspet_dataset.zip
 
 # get MPI
 mkdir dataset/MPI/

@@ -1,4 +1,6 @@
-dataset/
+dataset/FLIC
+dataset/LEEDS
+dataset/MPI
 *.caffemodel
 testing/results/
 *.m~
