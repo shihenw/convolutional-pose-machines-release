@@ -4,6 +4,7 @@ dataset/MPI/images
 dataset/MPI/mpii_human_pose_v1_u12_1
 training/lmdb/*
 training/json/*
+training/prototxt/*
 *.caffemodel
 testing/results/
 *.m~
