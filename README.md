@@ -23,9 +23,9 @@ Contact: shihenw@cmu.edu.
 ## Citation
 Please cite CPM in your publications if it helps your research:
 
-    @article{wei2016cpm,
-        Author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
-        Journal = {CVPR},
-        Title = {Convolutional pose machines},
-        Year = {2016}
+    @inproceedings{wei2016cpm,
+        author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
+        booktitle = {CVPR},
+        title = {Convolutional pose machines},
+        year = {2016}
     }
