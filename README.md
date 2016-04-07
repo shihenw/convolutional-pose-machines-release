@@ -20,11 +20,12 @@ Contact: shihenw@cmu.edu.
 - Run `python genProto.py` to get prototxt for caffe. Read [further explanation](https://github.com/shihenw/caffe) for layer parameters.
 - Train with generated prototxts and collect caffemodels.
 
-
+## Citation
 Please cite CPM in your publications if it helps your research:
+
     @article{wei2016cpm,
-      Author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
-      Journal = {CVPR},
-      Title = {Convolutional pose machines},
-      Year = {2016}
+        Author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
+        Journal = {CVPR},
+        Title = {Convolutional pose machines},
+        Year = {2016}
     }
