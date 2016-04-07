@@ -19,3 +19,12 @@ Contact: shihenw@cmu.edu.
 - Run `python genLMDB.py` to generate LMDBs for CPM data layer in [our caffe](https://github.com/shihenw/caffe). Change the main function to select dataset, and note that you can generate a LMDB with multiple datasets.
 - Run `python genProto.py` to get prototxt for caffe. Read [further explanation](https://github.com/shihenw/caffe) for layer parameters.
 - Train with generated prototxts and collect caffemodels.
+
+
+Please cite CPM in your publications if it helps your research:
+    @article{wei2016cpm,
+      Author = {Shih-En Wei and Varun Ramakrishna and Takeo Kanade and Yaser Sheikh},
+      Journal = {CVPR},
+      Title = {Convolutional pose machines},
+      Year = {2016}
+    }
