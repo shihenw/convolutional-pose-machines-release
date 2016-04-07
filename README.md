@@ -16,4 +16,4 @@ Contact: shihenw@cmu.edu.
 ## Training:
 - Run `get_data.sh` to get datasets including [FLIC Dataset](http://vision.grasp.upenn.edu/cgi-bin/index.php?n=VideoLearning.FLIC), [LEEDS Sport Dataset](http://www.comp.leeds.ac.uk/mat4saj/lsp.html) and its [extended training set](http://www.comp.leeds.ac.uk/mat4saj/lspet.html), and [MPII Dataset](http://human-pose.mpi-inf.mpg.de/).
 - Run `genJSON(<dataset_name>)` to generate a json file in `training/json/` folder. Dataset name can be `MPI`, `LEEDS`, or `FLIC`. The json files contain raw informations needed for training from each individual dataset.
-- Run `python genLMDB.py` to generate LMDBs for CPM data layer in [our caffe](https://github.com/shihenw/caffe). Change the main functions to select dataset, and note that you can generate a LMDB with multiple datasets.
+- Run `python genLMDB.py` to generate LMDBs for CPM data layer in [our caffe](https://github.com/shihenw/caffe). Change the main function to select dataset, and note that you can generate a LMDB with multiple datasets.
