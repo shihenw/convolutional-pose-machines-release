@@ -1,7 +1,7 @@
 # get FLIC
-#wget http://vision.grasp.upenn.edu/video/FLIC.zip
-#unzip FLIC.zip -d dataset/
-#rm -f FLIC.zip
+wget http://vision.grasp.upenn.edu/video/FLIC.zip
+unzip FLIC.zip -d dataset/
+rm -f FLIC.zip
 
 # get LEEDS
 cd dataset/; mkdir LEEDS/; cd ..
@@ -14,10 +14,10 @@ rm -f lsp_dataset.zip
 rm -f lspet_dataset.zip
 
 # get MPI
-#mkdir dataset/MPI/
-#wget http://datasets.d2.mpi-inf.mpg.de/andriluka14cvpr/mpii_human_pose_v1.tar.gz
-#wget http://datasets.d2.mpi-inf.mpg.de/leonid14cvpr/mpii_human_pose_v1_u12_1.tar.gz
-#tar -zxvf mpii_human_pose_v1.tar.gz -C dataset/MPI/
-#tar -zxvf mpii_human_pose_v1_u12_1.tar.gz -C dataset/MPI/
-#rm -f mpii_human_pose_v1.tar.gz
-#rm -f mpii_human_pose_v1_u12_1.tar.gz
+mkdir dataset/MPI/
+wget http://datasets.d2.mpi-inf.mpg.de/andriluka14cvpr/mpii_human_pose_v1.tar.gz
+wget http://datasets.d2.mpi-inf.mpg.de/leonid14cvpr/mpii_human_pose_v1_u12_1.tar.gz
+tar -zxvf mpii_human_pose_v1.tar.gz -C dataset/MPI/
+tar -zxvf mpii_human_pose_v1_u12_1.tar.gz -C dataset/MPI/
+rm -f mpii_human_pose_v1.tar.gz
+rm -f mpii_human_pose_v1_u12_1.tar.gz
