@@ -1,0 +1,70 @@
+[param]
+
+caffepath = '/home/shihenw/Research/caffe_cpm/matlab/caffe/'
+
+# CPU mode or GPU mode
+use_gpu = 0
+
+# GPU device number (doesn't matter for CPU mode)
+GPUdeviceNumber = 0
+
+# Select model (default: 1)
+modelID = 4
+
+# Use click mode or not. If yes (1), you will be asked to click on the center
+# of person to be pose-estimated (for multiple people image). If not (0),
+# the model will simply be applies on the whole image.
+click = 0
+
+# Scaling paramter: starting and ending ratio of person height to image
+# height, and number of scales per octave
+# warning: setting too small starting value on non-click mode will take
+# large memory
+starting_range = 0.9
+ending_range = 1
+octave = 10
+
+
+[models]
+## don't edit this part
+
+# caffe('reset');
+# caffe('set_device', GPUdeviceNumber);
+
+[[1]]
+caffemodel = ../model/_trained_LEEDS_OC_304/3S2L/pose_iter_220000.caffemodel
+deployFile = ../model/_trained_LEEDS_OC_304/3S2L/pose_deploy.prototxt
+description = LEEDS observer centric 3 stage 2 level
+boxsize = 304
+np = 14
+limbs = 1, 2, 3, 4, 4, 5, 6, 7, 7, 8, 9, 10, 10, 11, 12, 13, 13, 14 #group every two
+part_str = head, neck, Rsho, Relb, Rwri, Lsho, Lelb, Lwri, Rhip, Rkne, Rank, Lhip, Lkne, Lank, bkg
+
+[[2]]
+caffemodel = '../model/_trained_LEEDS_PC_304/3S2L/pose_iter_80000.caffemodel'
+deployFile = '../model/_trained_LEEDS_PC_304/3S2L/pose_deploy.prototxt'
+description = 'LEEDS person centric 3 stage 2 level'
+boxsize = 304
+np = 14
+limbs = 1, 2, 3, 4, 4, 5, 6, 7, 7, 8, 9, 10, 10, 11, 12, 13, 13, 14
+part_str = [head, neck, Rsho, Relb, Rwri, Lsho, Lelb, Lwri, Rhip, Rkne, Rank, Lhip, Lkne, Lank, bkg]
+
+[[3]]
+caffemodel = '../model/_trained_FLIC_304/3S2L/pose_iter_65000.caffemodel'
+deployFile = '../model/_trained_FLIC_304/3S2L/pose_deploy.prototxt'
+description = 'FLI1C observer centric 3 stage 2 level'
+boxsize = 304
+np = 9
+limbs = 2, 3, 3, 4, 5, 6, 6, 7
+part_str = [head, Rsho, Relb, Rwri, Lsho, Lelb, Lwri, Rhip, Lhip, bkg]
+
+[[4]]
+caffemodel_person = '../../model/_trained_person_MPI/pose_iter_70000.caffemodel'
+deployFile_person = '../../model/_trained_person_MPI/pose_deploy_copy_4sg_resize.prototxt'
+caffemodel = '../../model/_trained_MPI/pose_iter_320000.caffemodel'
+deployFile = '../../model/_trained_MPI/pose_deploy_resize.prototxt'
+description = 'MPII 3 stage 2 level'
+boxsize = 368
+np = 14
+limbs = 1, 2, 3, 4, 4, 5, 6, 7, 7, 8, 9, 10, 10, 11, 12, 13, 13, 14
+part_str = [head, neck, Rsho, Relb, Rwri, Lsho, Lelb, Lwri, Rhip, Rkne, Rank, Lhip, Lkne, Lank, bkg]
