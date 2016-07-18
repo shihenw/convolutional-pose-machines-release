@@ -10,3 +10,4 @@ testing/results/
 *.m~
 caffePath.cfg
 models/
+testing/python/.*
