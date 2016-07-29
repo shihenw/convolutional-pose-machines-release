@@ -3,7 +3,7 @@ Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh, "[Convolutional Pose
 
 This project is licensed under the terms of the GPL v2 license. By using the software, you are agreeing to the terms of the [license agreement](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/LICENSE.md).
 
-Contact: shihenw@cmu.edu.
+Contact: Shih-En Wei (weisteady@gmail.com)
 
 ## Before Everything
 - Watch some [videos](https://www.youtube.com/playlist?list=PLNh5A7HtLRcpsMfvyG0DED-Dr4zW5Lpcg).
