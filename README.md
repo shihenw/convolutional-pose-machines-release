@@ -12,8 +12,8 @@ Contact: Shih-En Wei (weisteady@gmail.com)
 
 ## Testing
 
-### Python
-This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/demo.ipynb) shows how to detect multiple people's poses as we demonstrated in CVPR'16. For real-time performance, please read it for further explanation.
+[//]: # (### Python)
+[//]: # (This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/demo.ipynb) shows how to detect multiple people's poses as we demonstrated in CVPR'16. For real-time performance, please read it for further explanation.)
 
 ### Matlab
 - Run `testing/get_model.sh` to retreive trained models from our web server.
