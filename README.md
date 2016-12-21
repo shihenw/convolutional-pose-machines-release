@@ -6,6 +6,7 @@ This project is licensed under the terms of the GPL v2 license. By using the sof
 Contact: Shih-En Wei (weisteady@gmail.com)
 
 ## Recent Updates
+- Synced our fork of caffe with most recent version (Dec. 2016) so that Pascal GPUs can work (tested with CUDA 8.0 and CUDNN 5).
 - Including a VGG-pretrained model in matlab (and also python) code. This model was used in CVPR'16 demo. It scores 90.1% on MPI test set.
 - We are working on [releasing code](https://github.com/ZheC/Multi-Person-Pose-Estimation/) of our [new work in multi-person pose estimation](https://arxiv.org/abs/1611.08050) demonstrated in ECCV'16 (best demo award!).
 
@@ -33,6 +34,9 @@ First, run `testing/get_model.sh` to retreive trained models from our web server
 - Run `python genLMDB.py` to generate LMDBs for CPM data layer in [our caffe](https://github.com/shihenw/caffe). Change the main function to select dataset, and note that you can generate a LMDB with multiple datasets.
 - Run `python genProto.py` to get prototxt for caffe. Read [further explanation](https://github.com/shihenw/caffe) for layer parameters.
 - Train with generated prototxts and collect caffemodels.
+
+## Related Repository
+- [Convolutional Pose Machines in Tensorflow](https://github.com/psycharo/cpm)
 
 ## Citation
 Please cite CPM in your publications if it helps your research:
