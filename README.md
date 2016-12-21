@@ -5,6 +5,8 @@ This project is licensed under the terms of the GPL v2 license. By using the sof
 
 Contact: Shih-En Wei (weisteady@gmail.com)
 
+![Teaser?](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/figures/frame0181_pose.png)
+
 ## Recent Updates
 - Synced our fork of caffe with most recent version (Dec. 2016) so that Pascal GPUs can work (tested with CUDA 8.0 and CUDNN 5).
 - Including a VGG-pretrained model in matlab (and also python) code. This model was used in CVPR'16 demo. It scores 90.1% on MPI test set, and can be trained in much shorter time than previous models.
