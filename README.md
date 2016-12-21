@@ -11,7 +11,7 @@ Contact: Shih-En Wei (weisteady@gmail.com)
 
 ## Before Everything
 - Watch some [videos](https://www.youtube.com/playlist?list=PLNh5A7HtLRcpsMfvyG0DED-Dr4zW5Lpcg).
-- Install [Caffe](http://caffe.berkeleyvision.org/). If you are interested in training this model on your own machines, or real-time systems, please use [our version](https://github.com/shihenw/caffe) (a submodule in this repo) with customized layers. Make sure you have done `make matcaffe` and `make pycaffe`.
+- Install [Caffe](http://caffe.berkeleyvision.org/). If you are interested in training this model on your own machines, or realtime systems, please use [our version](https://github.com/shihenw/caffe) (a submodule in this repo) with customized layers. Make sure you have compiled python and matlab interface. This repository at least runs on Ubuntu 14.04, OpenCV 2.4.10, CUDA 8.0, and CUDNN 5.
 [//]: # (- Copy `caffePath.cfg.example` to `caffePath.cfg` and set your own path in it.)
 - Include `.../convolutional-pose-machines-release/caffe/build/install/lib` in environment variable `LD_LIBRARY_PATH` if you used `cmake` to compile caffe.
 
