@@ -7,11 +7,12 @@ Contact: Shih-En Wei (weisteady@gmail.com)
 
 ## Recent Updates
 - Including a VGG-pretrained model in matlab (and also python) code. This model was used in CVPR'16 demo. It scores 90.1% on MPI test set.
+- We are working on [releasing code](https://github.com/ZheC/Multi-Person-Pose-Estimation/) of our new work [multi-person pose estimation](https://arxiv.org/abs/1611.08050) demonstrated in ECCV'16 (best demo award!).
 
 ## Before Everything
 - Watch some [videos](https://www.youtube.com/playlist?list=PLNh5A7HtLRcpsMfvyG0DED-Dr4zW5Lpcg).
 - Install [Caffe](http://caffe.berkeleyvision.org/). If you are interested in training this model on your own machines, or real-time systems, please use [our version](https://github.com/shihenw/caffe) (a submodule in this repo) with customized layers. Make sure you have done `make matcaffe` and `make pycaffe`.
-[//]: #(- Copy `caffePath.cfg.example` to `caffePath.cfg` and set your own path in it.)
+[//]: # (- Copy `caffePath.cfg.example` to `caffePath.cfg` and set your own path in it.)
 - Include `.../convolutional-pose-machines-release/caffe/build/install/lib` in environment variable `LD_LIBRARY_PATH` if you used `cmake` to compile caffe.
 
 ## Testing
