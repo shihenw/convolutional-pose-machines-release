@@ -18,7 +18,7 @@ Contact: Shih-En Wei (weisteady@gmail.com)
 ## Testing
 
 ### Python
-This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/demo.ipynb) shows how to detect multiple people's poses as we demonstrated in CVPR'16. For real-time performance, please read it for further explanation.
+- This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/demo.ipynb) shows how to detect multiple people's poses as we demonstrated in CVPR'16. For real-time performance, please read it for further explanation.
 
 ### Matlab
 - Run `testing/get_model.sh` to retreive trained models from our web server.
@@ -28,7 +28,7 @@ This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/
 
 ## Training
 - Run `get_data.sh` to get datasets including [FLIC Dataset](http://vision.grasp.upenn.edu/cgi-bin/index.php?n=VideoLearning.FLIC), [LEEDS Sport Dataset](http://www.comp.leeds.ac.uk/mat4saj/lsp.html) and its [extended training set](http://www.comp.leeds.ac.uk/mat4saj/lspet.html), and [MPII Dataset](http://human-pose.mpi-inf.mpg.de/).
-- Run `genJSON(<dataset_name>)` to generate a json file in `training/json/` folder. Dataset name can be `MPI`, `LEEDS`, or `FLIC`. The json files contain raw informations needed for training from each individual dataset.
+- Run `genJSON(<dataset_name>)` to generate a json file in `training/json/` folder (you'll have to create it). Dataset name can be `MPI`, `LEEDS`, or `FLIC`. The json files contain raw informations needed for training from each individual dataset.
 - Run `python genLMDB.py` to generate LMDBs for CPM data layer in [our caffe](https://github.com/shihenw/caffe). Change the main function to select dataset, and note that you can generate a LMDB with multiple datasets.
 - Run `python genProto.py` to get prototxt for caffe. Read [further explanation](https://github.com/shihenw/caffe) for layer parameters.
 - Train with generated prototxts and collect caffemodels.
