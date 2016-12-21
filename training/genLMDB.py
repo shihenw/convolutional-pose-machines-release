@@ -173,9 +173,9 @@ def float2bytes(floats):
 
 if __name__ == "__main__":
 	
-	#writeLMDB(['MPI'], 'lmdb/MPI_train_split', 1) # only include split training data (validation data is held out)
+	writeLMDB(['MPI'], '/data1/CPM/lmdb/MPI_train_split', 1) # only include split training data (validation data is held out)
 	#writeLMDB(['MPI'], 'lmdb/MPI_alltrain', 0)
 	#writeLMDB(['LEEDS'], 'lmdb/LEEDS_PC', 0)
 	#writeLMDB(['FLIC'], 'lmdb/FLIC', 0)
 
-	writeLMDB(['MPI', 'LEEDS'], 'lmdb/MPI_LEEDS_alltrain', 0) # joint dataset
+	#writeLMDB(['MPI', 'LEEDS'], 'lmdb/MPI_LEEDS_alltrain', 0) # joint dataset
