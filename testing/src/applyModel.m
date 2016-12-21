@@ -18,8 +18,8 @@ center = [(x_start + x_end)/2, (y_start + y_end)/2];
 
 % determine scale range
 middle_range = (y_end - y_start) / size(oriImg,1) * 1.2;
-starting_range = middle_range * 0.8;
-ending_range = middle_range * 3.0;
+starting_range = middle_range * param.start_scale;
+ending_range = middle_range * param.end_scale;
 
 starting_scale = boxsize/(size(oriImg,1)*ending_range);
 ending_scale = boxsize/(size(oriImg,1)*starting_range);
@@ -56,7 +56,7 @@ for m = 1:length(multiplier)
     
     fprintf('Running FPROP for scale #%d/%d....', m, length(multiplier));
     tic;
-    score(:,m) = applyDNN(imageToTest, net, nstage);
+    score(:,m) = applyDNN(imageToTest, net, nstage, np);
     time = toc;
     fprintf('done, elapsed time: %.3f sec\n', time);
     
@@ -99,7 +99,7 @@ function img_out = preprocess(img, mean, param)
     centerMapCell = produceCenterLabelMap([boxsize boxsize], boxsize/2, boxsize/2, param.model(param.modelID).sigma);
     img_out(:,:,4) = centerMapCell{1};
     
-function scores = applyDNN(images, net, nstage)
+function scores = applyDNN(images, net, nstage, np)
     input_data = {single(images)};
     % do forward pass to get scores
     % scores are now Width x Height x Channels x Num
@@ -111,6 +111,13 @@ function scores = applyDNN(images, net, nstage)
         blob_id = find(not(cellfun('isempty', blob_id_C)));
         blob_id = blob_id(end);
         scores{s} = net.blob_vec(blob_id).get_data();
+        if(size(scores{s}, 3) ~= np+1)
+            string_to_search = 'conv5_2_CPM';
+            blob_id_C = strfind(net.blob_names, string_to_search);
+            blob_id = find(not(cellfun('isempty', blob_id_C)));
+            blob_id = blob_id(end);
+            scores{s} = net.blob_vec(blob_id).get_data();
+        end
     end
     
 function [img_padded, pad] = padAround(img, boxsize, center, padValue)

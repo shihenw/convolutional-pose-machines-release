@@ -13,20 +13,22 @@ GPUdeviceNumber = 0;
 % 2: MPII 6-stage CPM
 % 3: LSP(PC) 6-stage CPM
 % 4: FLIC 4-stage CPM (upper body only)
-param.modelID = 1;
+% 5: MPII 6-stage CPM VGG-pretrained
+param.modelID = 5;
 
 % Scaling paramter: starting and ending ratio of person height to image
 % height, and number of scales per octave
 % warning: setting too small starting value on non-click mode will take
 % large memory
 param.octave = 6;
+param.start_scale = 0.8;
+param.end_scale = 1.2;
 
 
-%% don't edit this part
-
-% path of your caffe
-caffepath = textread('../caffePath.cfg', '%s', 'whitespace', '\n\t\b ');
-caffepath= [caffepath{1} '/matlab/'];
+% Path of caffe. You can change to your own caffe just for testing
+caffepath = '../caffe/matlab/';
+%caffepath = textread('../caffePath.cfg', '%s', 'whitespace', '\n\t\b ');
+%caffepath= [caffepath{1} '/matlab/'];
 fprintf('You set your caffe in caffePath.cfg at: %s\n', caffepath);
 addpath(caffepath);
 caffe.reset_all();
@@ -39,6 +41,8 @@ else
     caffe.set_mode_cpu();
 end
 
+
+%% don't edit this part
 param.click = 1;
 
 param.model(1).caffemodel = '../model/_trained_MPI/pose_iter_985000_addLEEDS.caffemodel';
@@ -99,3 +103,18 @@ param.model(4).limbs = [1 2; 2 3; 4 5; 5 6];
 param.model(4).part_str = {'Lsho', 'Lelb', 'Lwri', ...
                            'Rsho', 'Relb', 'Rwri', ...
                            'Lhip', 'Rhip', 'head', 'bkg'};
+
+param.model(5).caffemodel = '../model/_trained_MPI/pose_iter_320000.caffemodel';
+param.model(5).deployFile = '../model/_trained_MPI/pose_deploy_resize.prototxt';
+param.model(5).description = 'MPII 6-stage CPM';
+param.model(5).description_short = 'MPII_VGG_6s';
+param.model(5).boxsize = 368;
+param.model(5).padValue = 128;
+param.model(5).np = 14;
+param.model(5).sigma = 21;
+param.model(5).stage = 6;
+param.model(5).limbs = [1 2; 3 4; 4 5; 6 7; 7 8; 9 10; 10 11; 12 13; 13 14];
+param.model(5).part_str = {'head', 'neck', 'Rsho', 'Relb', 'Rwri', ...
+                         'Lsho', 'Lelb', 'Lwri', ...
+                         'Rhip', 'Rkne', 'Rank', ...
+                         'Lhip', 'Lkne', 'Lank', 'bkg'};

@@ -1,27 +1,32 @@
+%% Demo code of "Convolutional Pose Machines", 
+% Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh
+% In CVPR 2016
+% Please contact Shih-En Wei at weisteady@gmail.com for any problems or questions
+
 close all;
 addpath('src'); 
 addpath('util');
 param = config();
 
-%% edit this part (select one to uncomment)
-selection = 1;
+%% choose a switch case
+selection = 2;
 switch(selection)
     case 1
+        benchmark_data = 'MPI';
+        benchmark_modelID = 1; % MPI model
+        % MPI score 90.1% total PCKh@0.5
+    case 2
         benchmark_data = 'LSP';
         benchmark_modelID = 1; % MPI+LSP model
         % LSP score 90.5% total PCK@0.2
-    case 2
+    case 3
         benchmark_data = 'MPI';
         benchmark_modelID = 1; % MPI+LSP model
         % MPI score 88.5% @ PCKh0.5
-    case 3
+    case 4
         benchmark_data = 'MPI';
         benchmark_modelID = 2; % MPI model
         % MPI score 87.9% @ PCKh0.5
-    case 4
-        benchmark_data = 'LSP';
-        benchmark_modelID = 3; % LSP model 
-        % LSP score 84.32% total PCK@0.2
     case 5
         benchmark_data = 'FLIC';
         benchmark_modelID = 4; % FLIC model

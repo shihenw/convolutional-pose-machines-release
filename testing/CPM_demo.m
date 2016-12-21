@@ -1,7 +1,7 @@
 %% Demo code of "Convolutional Pose Machines", 
 % Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh
 % In CVPR 2016
-% Please contact Shih-En Wei at shihenw@cmu.edu for any problems or questions
+% Please contact Shih-En Wei at weisteady@gmail.com for any problems or questions
 %%
 close all;
 addpath('src'); 
