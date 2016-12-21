@@ -17,12 +17,12 @@ Contact: Shih-En Wei (weisteady@gmail.com)
 - Include `<repo path>/caffe/build/install/python` in environment variable `$PYTHONPATH`.
 
 ## Testing
+First, run `testing/get_model.sh` to retreive trained models from our web server.
 
 ### Python
 - This [demo file](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/demo.ipynb) shows how to detect multiple people's poses as we demonstrated in CVPR'16. For real-time performance, please read it for further explanation.
 
 ### Matlab
-- Run `testing/get_model.sh` to retreive trained models from our web server.
 - 1. `CPM_demo.m`: Put the testing image into `sample_image` then run it! You can select models (we provided 4) or other parameters in `config.m`. If you just want to try our best-scoring model, leave them default.
 - 2. `CPM_benchmark.m`: Run the model on test benchmark and see the scores. Prediction files will be saved in `testing/predicts`.
 
