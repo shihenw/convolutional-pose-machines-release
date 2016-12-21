@@ -5,7 +5,7 @@ This project is licensed under the terms of the GPL v2 license. By using the sof
 
 Contact: Shih-En Wei (weisteady@gmail.com)
 
-![Teaser?](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/figures/frame0181_pose.png)
+![Teaser?](https://github.com/shihenw/convolutional-pose-machines-release/blob/master/testing/python/figures/teaser-github.png)
 
 ## Recent Updates
 - Synced our fork of caffe with most recent version (Dec. 2016) so that Pascal GPUs can work (tested with CUDA 8.0 and CUDNN 5).
