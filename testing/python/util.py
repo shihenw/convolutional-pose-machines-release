@@ -62,7 +62,7 @@ def padRightDownCorner(img):
     pad[0] = 0 # up
     pad[1] = 0 # left
     pad[2] = 0 if (h%8==0) else 8 - (h % 8) # down
-    pad[3] = 0 if (w*8==0) else 8 - (w % 8) # right
+    pad[3] = 0 if (w%8==0) else 8 - (w % 8) # right
     
     img_padded = img
     pad_up = np.tile(img_padded[0:1,:,:]*0 + 128, (pad[0], 1, 1))
