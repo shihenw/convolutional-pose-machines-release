@@ -9,5 +9,5 @@ training/prototxt/*
 testing/results/
 *.m~
 caffePath.cfg
-models/
+model/*
 testing/python/.*
